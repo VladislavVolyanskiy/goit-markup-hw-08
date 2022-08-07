@@ -1,2 +1,2 @@
 # goit-markup-hw-05
-homework 5
+HTML_CSS_62_module1_homework5
