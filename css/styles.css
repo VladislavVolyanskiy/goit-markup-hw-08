@@ -671,6 +671,12 @@ body {
   margin: 15px; */
 }
 
+.portfolio-item-link {
+  transition-property: box-shadow;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .portfolio-item-link:hover {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -687,7 +693,7 @@ body {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 } */
 
-.portfolio-item:hover .portfolio-over-text {
+.portfolio-item-link:hover .portfolio-over-text {
   transform: translateY(0);
 }
 
