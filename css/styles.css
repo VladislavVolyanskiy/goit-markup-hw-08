@@ -518,6 +518,7 @@ body {
 
 .address-link {
   opacity: 1;
+  min-width: 231px;
 }
 
 .footer-contact-link:hover,
