@@ -1,0 +1,59 @@
+.advantages.section {
+  padding-bottom: 0;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.advantages__item {
+  max-width: 270px;
+  flex-basis: 270px;
+  &::before {
+  content: "";
+  display: block;
+  background-color: $secondary-bnd-color;
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+  }
+  &:nth-child(1)::before {
+  background-image: url("../images/group1.svg");
+  }
+  &:nth-child(2)::before {
+    background-image: url("../images/group2.svg");
+  }
+  &:nth-child(3)::before {
+    background-image: url("../images/group3.svg");
+  }
+  &:nth-child(4)::before {
+    background-image: url("../images/group4.svg");
+  }
+}
+
+/* для ADVANTAGES вариант2 */
+/* .advantages-item-pic {
+  margin-bottom: 30px;
+} */
+
+.advantages__item-title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $title-color;
+  margin-bottom: 10px;
+}
+
+.advantages__text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  /* color: $item-text-color; */
+  color: inherit;
+}

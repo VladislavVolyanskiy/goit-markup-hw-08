@@ -1,0 +1,209 @@
+.backdrop {
+  position: fixed;
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 528px;
+  height: 581px;
+  transform: translate(-50%, -50%) rotateY(0deg);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 40px;
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) rotateY(90deg);
+    }
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  border: solid 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /* выше - все свойства перехода - одной строкой */
+  /* transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); */
+    &:hover {
+    fill: $accent-color;
+    }
+}
+
+.modal-title {
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 12px;
+}
+
+.modal-label {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: $item-text-color;
+  display: block;
+  margin-bottom: 4px;
+  span {
+  display: block;
+  margin-bottom: 4px;
+  }
+}
+
+.modal-field {
+  margin-bottom: 10px;
+}
+
+.modal-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding: 11px 12px 11px 42px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  color: #000000;
+  outline: transparent;
+  transition-property: border-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:focus {
+    border-color: $accent-color;
+    // & + .input-icon {
+    // fill: $accent-color;
+    //                 }
+    }
+  &::placeholder {
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.01em;
+    color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+/* .modal-input:required {
+  border-color: red;
+} */
+
+.input-wrap {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  left: 12px;
+  /* ниже - паттерн выравнивания по высоте позиционированного элемента относительно родителя */
+  top: 50%;
+  transform: translateY(-50%);
+  
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-input:focus + & {
+    fill: $accent-color;
+    }
+}
+
+.comment-label {
+  margin-bottom: 20px;
+}
+
+.modal-comment {
+  display: block;
+  padding: 12px 16px;
+  height: 120px;
+  resize: none;
+  /* margin-left: 0; */
+  /* width: 100%; */
+  /* border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px; */
+}
+
+.checkbox-field {
+  margin-bottom: 30px;
+}
+
+.modal-checkbox-label {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  display: flex;
+  align-items: center;
+  span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-left: 12px;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-checkbox:checked + & {
+    background-color: $accent-color;
+    border: none;
+    }
+  }
+}
+
+.check-icon {
+  fill: transparent;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  .modal-checkbox:checked + .modal-checkbox-label & {
+    fill: #ffffff;
+    }
+}
+
+/* вариант через стили, без html */
+/* .modal-checkbox-label::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 2px;
+  margin-left: 12px;
+  margin-right: 10px;
+}
+
+.modal-checkbox:checked + .modal-checkbox-label::before {
+  background-color: $accent-color;
+  border: none;
+  background-image: url(../images/tick.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+} */
+
+.agreement-link {
+  color: $accent-color;
+  text-decoration-line: underline;
+  margin-left: 5px;
+}
+
+.send-btn {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,8 +1,4 @@
 {
-  "prettier.configPath": "prettirrc.json"
-}
-
-{
   "liveSassCompile.settings.formats": [
     {
       "format": "expanded",
@@ -15,7 +11,7 @@
       "savePath": "/css"
     }
   ],
-  "liveSassCompile.settings.excludeList": ["**/node_modules/**", ".vscode/**"],
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**"],
   "liveSassCompile.settings.generateMap": true,
   "liveServer.settings.port": 1235,
   "liveSassCompile.settings.autoprefix": null

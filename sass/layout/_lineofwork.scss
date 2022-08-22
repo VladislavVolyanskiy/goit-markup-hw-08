@@ -1,0 +1,27 @@
+
+.lineofwork__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.lineofwork__item {
+  position: relative;
+}
+
+.lineofwork__over-text {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  width: 100%;
+  min-height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #ffffff;
+  background: rgba(47, 48, 58, 0.8);
+  bottom: 0px;
+  margin-bottom: 0;
+}

@@ -1,0 +1,28 @@
+body {
+  font-family: $common-font;
+  color: $item-text-color;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  display: inline-block;
+}
+
+button {
+  font-family: inherit;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  /* расширяем кликабельную площадь кнопки*/
+  /* border: 1px solid transparent; */
+}
+
+img {
+  // display: block;
+  max-width: 100%;
+  height: auto;
+}

@@ -1,0 +1,42 @@
+.logo {
+  display: inline-block;
+  font-family: $logo-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  //Вариант 1: logo__part и модификаторы logo__part--light. На модификаторы только ставим цвет.
+  //
+  &__part{
+    &--dark {
+      color:black;
+      }
+    &--light {
+      color:white
+      }
+    }
+  // &--header {
+  //   margin-right: 93px;
+  // }
+  // &--footer {
+  //   margin-bottom: 20px;
+  // }
+}
+  // Вариант 2: микс
+  //
+.header__logo {
+  margin-right: 93px;
+}
+
+// .header__logo .logo__part {
+//   color:#000000;
+// }
+
+.footer__logo {
+  margin-bottom: 20px;
+}
+
+// .footer__logo .logo__part {
+//   color:#ffffff;
+// }
