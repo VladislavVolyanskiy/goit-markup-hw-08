@@ -462,10 +462,8 @@ img {
 }
 
 .navigation {
-  flex-basis: 504px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
 }
 .navigation__link {
   font-weight: 500;
@@ -477,6 +475,11 @@ img {
 .navigation__link:hover, .navigation__link:focus {
   background-color: #ffffff;
   color: #2196f3;
+}
+@media screen and (min-width: 768px) {
+  .navigation {
+    flex-basis: 516px;
+  }
 }
 
 .nav__btn {
@@ -533,6 +536,7 @@ img {
 @media screen and (min-width: 1200px) {
   .header__contacts {
     display: flex;
+    flex-direction: row;
     column-gap: 30px;
   }
 }

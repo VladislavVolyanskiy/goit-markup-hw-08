@@ -23,7 +23,6 @@
 }
 
 .navigation {
-  flex-basis: calc(134px+294px+88px); //ширина блоков и расстояние между ними по макету.
   display: flex;
   align-items: center;
   &__link {
@@ -38,6 +37,9 @@
       color: $accent-color;
       }
   }
+  @include tablet {
+    flex-basis: calc(134px + 294px + 88px); //ширина блоков и расстояние между ними по макету.
+    } 
 }
 
 .nav__btn {
@@ -76,7 +78,6 @@
 .header__contacts {
   display: none;
   @include tablet {
-    // width: auto;
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -84,6 +85,7 @@
     }
   @include desktop {
     display: flex;
+    flex-direction: row;
     column-gap:30px;
     }
 }
