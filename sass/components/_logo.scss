@@ -16,27 +16,17 @@
       color:white
       }
     }
-  // &--header {
-  //   margin-right: 93px;
-  // }
-  // &--footer {
-  //   margin-bottom: 20px;
-  // }
-}
-  // Вариант 2: микс
-  //
-.header__logo {
-  margin-right: 93px;
 }
 
-// .header__logo .logo__part {
-//   color:#000000;
-// }
+.header__logo {
+  @include desktop {
+    margin-right: 93px;
+    }
+  @include tablet {
+    // margin-right: 88px;
+    }
+}
 
 .footer__logo {
   margin-bottom: 20px;
 }
-
-// .footer__logo .logo__part {
-//   color:#ffffff;
-// }

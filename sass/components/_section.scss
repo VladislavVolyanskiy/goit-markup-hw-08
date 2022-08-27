@@ -1,5 +1,10 @@
-.section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+.section { 
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: $primary-bnd-color;
+  // outline: 2px solid blue; // for testing purposes
+  @include desktop {
+    padding-top: 94px;
+    padding-bottom: 94px;
+    }
 }

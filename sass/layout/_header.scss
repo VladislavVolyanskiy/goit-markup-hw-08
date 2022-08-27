@@ -1,17 +1,29 @@
 .header {
-  padding: 24px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #ececec;
-  > .container {
-  display: flex;
-  align-items: center;
+  &__container {
+    width: 100%;
+    @include desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    @include tablet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
   }
-  .list {
-  display: flex;
-  gap: 50px;
+  @include tablet {
+    padding: 21px 0;
+  }
+  @include desktop {
+    padding: 24px 0;
   }
 }
 
 .navigation {
+  flex-basis: calc(134px+294px+88px); //ширина блоков и расстояние между ними по макету.
   display: flex;
   align-items: center;
   &__link {
@@ -28,14 +40,53 @@
   }
 }
 
-.header__contacts {
+.nav__btn {
+  width: 40px;
+  height: 40px;
+  display: block;
   margin-left: auto;
+  justify-content: center;
+  align-items: center;
+  background-color: $primary-bnd-color;
+  border: none;
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
 }
 
-/* другой способ задать расстояния между элементами списка */
-/* .menu-nav-item:not(:last-child) {
-  margin-right: 50px;
-} */
+.navigation__list {
+  display: none;
+  @include tablet {
+    display: flex;
+    gap: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // margin-right: 84px;
+    }
+  @include desktop {
+    display: flex;
+    gap: 50px;
+    }
+}
+
+.header__contacts {
+  display: none;
+  @include tablet {
+    // width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap:9px;
+    }
+  @include desktop {
+    display: flex;
+    column-gap:30px;
+    }
+}
 
 .current {
   color: $accent-color;
@@ -53,10 +104,15 @@
 }
 
 .contacts__link--header {
+  height: 14px;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14px;
   font-weight: 500;
   letter-spacing: 0.02em;
+  @include tablet {
+    @include font (12, 14, 500, 0.02)
+  }
+
   /* color: $item-text-color; */
   color: inherit;
   display: flex;

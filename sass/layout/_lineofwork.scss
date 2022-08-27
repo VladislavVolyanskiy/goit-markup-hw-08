@@ -1,3 +1,11 @@
+.lineofwork {
+display: none;
+  @include desktop {
+  display: block;
+  padding-top: 0;
+  }
+}
+
 
 .lineofwork__list {
   display: flex;

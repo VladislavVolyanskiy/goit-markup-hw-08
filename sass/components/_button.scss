@@ -1,6 +1,4 @@
-.hero__btn,
-.send__btn,
-.signup__btn {
+.btn {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -24,4 +22,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
+}
+
+.send__btn {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

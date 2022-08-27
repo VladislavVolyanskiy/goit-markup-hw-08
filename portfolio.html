@@ -23,11 +23,11 @@
   </head>
   <body>
     <!--------------HEADER---------------->
-    <header class="header">
+    <!-- <header class="header">
       <div class="container">
-        <nav class="navigation">
+        <nav class="navigation"> -->
           <!-- prettier-ignore -->
-          <a href="./index.html" class="logo header__logo link">
+          <!-- <a href="./index.html" class="logo header__logo link">
             Web<span class="logo__part logo__part--dark">Studio</span>
           </a>
           <ul class="navigation__list list">
@@ -61,7 +61,7 @@
           </li>
         </ul>
       </div>
-    </header>
+    </header> -->
     <main>
       <!--------------PORTFOLIO---------------->
       <section class="portfolio section">
@@ -276,7 +276,7 @@
                   </p>
                 </div>
                 <div class="portfolio__item-text">
-                  <h2>Growing Business</h2>
+                  <h2 class="portfolio__name">Growing Business</h2>
                   <p class="portfolio__type">Приложение</p>
                 </div>
               </a>
@@ -288,7 +288,7 @@
     <!--------------FOOTER---------------->
     <!-- prettier-ignore -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container container">
         <div class="address-wrap">
           <a href="./index.html" class="logo footer__logo link">
         Web<span class="logo__part logo__part--light">Studio</span>
@@ -348,11 +348,10 @@
         </ul>
       </div>
         <form class="footer__signip signup">
-        <!-- <p class="footer-signup-title">Подпишитесь на рассылку</p> -->
         <label class="signup__title--light signup__title" for="signup-mail">Подпишитесь на рассылку</label>
         <div class="signup__wrap">
         <input id="signup-mail" type="email" name="signup-mail" class="signup__input" placeholder="E-mail">
-        <button type="submit" class="signup__btn--footer signup__btn">
+        <button type="submit" class="signup__btn--footer signup__btn btn">
           <span>Отправить</span>
           <svg class="signup__icon" width="24" height="24">
             <use href="./images/sprite.svg#send"></use>

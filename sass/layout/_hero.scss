@@ -1,7 +1,11 @@
 .hero.section {
-  padding-top: 200px;
-  padding-bottom: 200px;
+  padding-top: 118px;
+  padding-bottom: 118px;
   text-align: center;
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    }
 }
 
 .hero--bnd {
@@ -18,17 +22,25 @@
 
 .hero__title {
   font-family: $common-font;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-align: center;
+  @include font (26, 42, 900, 0.06);
   color: #ffffff;
-  /* padding-top: 200px; */
-
-  width: 696px;
-  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
+  text-transform: uppercase;
+  max-width: 360px; // instead of "width" to make it responsive below 480px screen
+  min-width: min-content;
+  margin-bottom: 30px;
+  // @include tablet {
+  //   width: 360px
+  // }
+  @include desktop {
+    @include font (44, 60, 900, 0.06);
+    // lower properties is now work from mixin
+    // font-size: 44px;
+    // font-weight: 900;
+    // line-height: 1.36;
+    // letter-spacing: 0.06em;
+    max-width: 696px;
+    }
 }

@@ -1,14 +1,37 @@
 .footer {
   background-color: $footer-bnd-color;
   padding: 60px 0;
-  .container {
+}
+
+.footer__container { 
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 60px;
+  column-gap: 165px;
+  // @include tablet {
+  //column-gap: 165px;
+  //}
+  @include desktop {
+    justify-content:left;
+    gap: 0;
+    align-items: baseline;
+    }
+}
+
+.address-wrap {
+  text-align: center;
+  width: 232px;
+  @include desktop {
+    text-align: left;
   }
 }
 
 .address__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
+  @include desktop {
+    margin-bottom: 9px;
+  }
 }
 
 /* вариант для задания большего количества свойств последнему элементу */
@@ -31,17 +54,29 @@
 
 .address__link--geo {
   opacity: 1;
-  min-width: 231px;
+  // min-width: 231px;
 }
 
 .footer__socials {
   display: block;
   width: 206px;
+  @include desktop {
   margin-left: 70px;
+  }
 }
+
+
+  // .address-wrap, .footer__socials {
+  // @include tablet {
+  //   flex-basis: 50%;
+  //   }
+  // }
+
+
 
 .socials__title,
 .signup__title {
+  text-align: center;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -49,6 +84,9 @@
   text-transform: uppercase;
   margin-bottom: 20px;
   &--light {color: #ffffff;
+  }
+  @include desktop {
+  text-align: left;
   }
 }
 
@@ -58,22 +96,36 @@
 //   height: 20;
 // }
 
-.signup {
-  display: flex;
-  flex-wrap: wrap;
-}
+// .signup {
+//   display: flex;
+//   flex-wrap: wrap;
+//   justify-content: center;
+// }
 
 .footer__signip {
-  margin-left: 93px;
-}
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 450px;
+  @include desktop {
+    justify-content: left;
+    margin-left: 93px;
+    }
+  }
 
 .signup__wrap {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  @include desktop {
+    gap: 12px;
+    flex-wrap: nowrap;
+    }
 }
 
 .signup__input {
-  width: 358px;
+  width: 100%;
   color: rgba(255, 255, 255, 0.6);
   background-color: inherit;
   outline: transparent;
@@ -87,6 +139,9 @@
     }
   &:focus {
     border-color: $accent-color;
+    }
+    @include desktop {
+      width: 358px;
     }
 }
 

@@ -24,12 +24,17 @@
   <body>
     <!--------------HEADER---------------->
     <header class="header">
-      <div class="container">
+      <div class="header__container container">
         <nav class="navigation">
           <!-- prettier-ignore -->
           <a href="./index.html" class="logo header__logo link">
             Web<span class="logo__part logo__part--dark">Studio</span>
           </a>
+          <button type="button" class="nav__btn">
+            <svg width="24" height="16">
+              <use href="./images/sprite.svg#hamburger"></use>
+            </svg>
+          </button>
           <ul class="navigation__list list">
             <li class="navigation__item">
               <a href="./index.html" class="navigation__link link current">Студия</a>
@@ -65,13 +70,13 @@
     <main>
       <!--------------HERO---------------->
       <section class="hero hero--bnd section ">
-        <div class="container">
+        <div class="hero__container container">
           <h1 class="hero__title">
             Эффективные решения
             <!-- <br /> -->
             для вашего бизнеса
           </h1>
-          <button type="button" class="hero__btn" data-modal-open>Заказать услугу</button>
+          <button type="button" class="hero__btn btn" data-modal-open>Заказать услугу</button>
         </div>
       </section>
       <!--------------ADVANTAGES---------------->
@@ -152,7 +157,7 @@
       </section> -->
       <!--------------LINEOFWORK---------------->
       <section class="lineofwork section">
-        <div class="container">
+        <div class="lineofwork__container container">
           <h2 class="lineofwork__title title">Чем мы занимаемся</h2>
           <ul class="lineofwork__list list">
             <li class="lineofwork__item">
@@ -380,7 +385,7 @@
     <!--------------FOOTER---------------->
     <!-- prettier-ignore -->
     <footer class="footer">
-      <div class="container">
+      <div class="footer__container container">
         <div class="address-wrap">
           <a href="./index.html" class="logo footer__logo link">
         Web<span class="logo__part logo__part--light">Studio</span>
@@ -440,11 +445,10 @@
         </ul>
       </div>
         <form class="footer__signip signup">
-        <!-- <p class="footer-signup-title">Подпишитесь на рассылку</p> -->
-        <label class="signup__title--light signup__title" for="signup-mail">Подпишитесь на рассылку</label>
-        <div class="signup__wrap">
-        <input id="signup-mail" type="email" name="signup-mail" class="signup__input" placeholder="E-mail">
-        <button type="submit" class="signup__btn--footer signup__btn">
+          <label class="signup__title--light signup__title" for="signup-mail">Подпишитесь на рассылку</label>
+          <div class="signup__wrap">
+          <input id="signup-mail" type="email" name="signup-mail" class="signup__input" placeholder="E-mail">
+          <button type="submit" class="signup__btn--footer signup__btn btn">
           <span>Отправить</span>
           <svg class="signup__icon" width="24" height="24">
             <use href="./images/sprite.svg#send"></use>
@@ -540,7 +544,7 @@
               <a href="" class="agreement-link link">Условия договора</a>
             </label>
           </div>
-          <button type="submit" class="send__btn button">Отправить</button>
+          <button type="submit" class="send__btn btn">Отправить</button>
         </form>
       </div>
     </div>
