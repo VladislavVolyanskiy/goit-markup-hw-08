@@ -61,16 +61,16 @@
           </li>
         </ul>
         <!-- кнопка открытия моб. меню -->
-        <button type="button" aria-expanded="false" aria-controls="mobile-menu" class="menu-open-btn trans-fill">
+        <button type="button" aria-expanded="false" aria-controls="mob-container" class="menu-open-btn trans-fill">
           <svg width="24" height="16">
             <use href="./images/sprite.svg#hamburger"></use>
           </svg>
         </button>
         <!-- моб. меню ------------------>
         <div class="mob-menu is-hidden">
-          <div class="mobile-menu" id="mobile-menu">
+          <div class="mob-container" id="mob-container">
             <div class="mob-menu-upper">
-              <button type="button" class="menu-close-btn" menu-close>
+              <button type="button" class="menu-close-btn">
                 <svg width="24" height="16">
                   <use href="./images/sprite.svg#menu-close"></use>
                 </svg>
@@ -142,7 +142,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img src="./images/portfolio01.jpg" alt="Технокряк" width="370" height="294" class="portfolio__pic" />
+                  <picture>
+                    <source
+                      srcset="./images/portfol01.jpg 1x, ./images/portfol01_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol01_tab_1x.jpg 1x, ./images/portfol01_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol01_mob_1x.jpg 1x, ./images/portfol01_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol01.jpg" alt="Технокряк" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -157,13 +171,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio02.jpg"
-                    alt="New Orlean vs Golden Star"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol02.jpg 1x, ./images/portfol02_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol02_tab_1x.jpg 1x, ./images/portfol02_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol02_mob_1x.jpg 1x, ./images/portfol02_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol02.jpg" alt="New Orlean vs Golden Star" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -178,13 +200,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio03.jpg"
-                    alt="Ресторан Seafood"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol03.jpg 1x, ./images/portfol03_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol03_tab_1x.jpg 1x, ./images/portfol03_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol03_mob_1x.jpg 1x, ./images/portfol03_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol03.jpg" alt="Ресторан Seafood" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -199,13 +229,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio04.jpg"
-                    alt="Проект Prime"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol04.jpg 1x, ./images/portfol04_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol04_tab_1x.jpg 1x, ./images/portfol04_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol04_mob_1x.jpg 1x, ./images/portfol04_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol04.jpg" alt="Проект Prime" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -220,13 +258,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio05.jpg"
-                    alt="Проект Boxes"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol05.jpg 1x, ./images/portfol05_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol05_tab_1x.jpg 1x, ./images/portfol05_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol05_mob_1x.jpg 1x, ./images/portfol05_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol05.jpg" alt="Проект Boxes" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -241,13 +287,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio06.jpg"
-                    alt="Inspiration has no Borders"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol06.jpg 1x, ./images/portfol06_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol06_tab_1x.jpg 1x, ./images/portfol06_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol06_mob_1x.jpg 1x, ./images/portfol06_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol06.jpg" alt="Inspiration has no Borders" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -262,13 +316,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio07.jpg"
-                    alt="Издание Limited Edition<"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol07.jpg 1x, ./images/portfol07_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol07_tab_1x.jpg 1x, ./images/portfol07_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol07_mob_1x.jpg 1x, ./images/portfol07_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol07.jpg" alt="Издание Limited Edition" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -283,13 +345,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio08.jpg"
-                    alt="Проект LAB"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol08.jpg 1x, ./images/portfol08_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol08_tab_1x.jpg 1x, ./images/portfol08_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol08_mob_1x.jpg 1x, ./images/portfol08_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol08.jpg" alt="Проект LAB" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.
@@ -304,13 +374,21 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio09.jpg"
-                    alt="Growing Business"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <picture>
+                    <source
+                      srcset="./images/portfol09.jpg 1x, ./images/portfol09_2x.jpg 2x"
+                      media="(min-width: 1200px)"
+                    />
+                    <source
+                      srcset="./images/portfol09_tab_1x.jpg 1x, ./images/portfol09_tab_2x.jpg 2x"
+                      media="(min-width: 768px)"
+                    />
+                    <source
+                      srcset="./images/portfol09_mob_1x.jpg 1x, ./images/portfol09_mob_2x.jpg 2x"
+                      media="(max-width: 767px)"
+                    />
+                    <img src="./images/portfol09.jpg" alt="Growing Business" class="portfolio__pic" />
+                  </picture>
                   <p class="portfolio__over-text">
                     Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
                     посетителю получить исчерпывающие сведения о компании или частном лице.

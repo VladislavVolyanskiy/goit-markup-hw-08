@@ -7,33 +7,39 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  // overflow-y: auto; // как сделать чтобы модалка скролилась по вертикали, если не помещается в высоту вьюпорта?
 }
 
 .modal {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: calc(100% - 30px);
+  width: calc(100% - 20px);
   max-width: 450px;
-  min-height: 609px;
+  // min-height: 609px;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
   transform: translate(-50%, -50%) rotateY(0deg);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 40px 20px;
+  padding: 40px 25px;
   .backdrop.is-hidden & {
     transform: translate(-50%, -50%) rotateY(90deg);
   }
   @include mobile {
     width: 450px;
-    min-height: 609px;
     padding: 40px;
+  }
+  @include tablet {
+    padding: 40px;
+    max-width: 528px;
+    min-width: 450px;
   }
   @include desktop {
     padding: 40px;
     max-width: 528px;
-    height: 581px;
+    width: 528px;
+    // height: 581px;
   }
 }
 
@@ -57,10 +63,13 @@
 }
 
 .modal-title {
-  font-size: 20px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.03em;
+  @include font(20, 30, 700, 0.03);
+  @include desktop {
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
   margin-bottom: 12px;
 }
 
@@ -97,9 +106,9 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:focus {
     border-color: $accent-color;
-    // & + .input-icon {
-    // fill: $accent-color;
-    // }
+    & + .input-icon {
+      fill: $accent-color;
+    }
   }
   &::placeholder {
     font-size: 12px;
@@ -150,18 +159,21 @@
 }
 
 .modal-checkbox-label {
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
+  @include font(12, 14, null, 0.03);
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
   display: flex;
   align-items: center;
+  justify-content: center;
   span {
     width: 16px;
     height: 15px;
     border: 2px solid #212121;
     border-radius: 2px;
-    margin-left: 12px;
-    margin-right: 10px;
+    margin-right: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,6 +181,10 @@
     .modal-checkbox:checked + & {
       background-color: $accent-color;
       border: none;
+    }
+    @include desktop {
+      margin-left: 12px;
+      margin-right: 10px;
     }
   }
 }

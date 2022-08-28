@@ -49,14 +49,17 @@
 
 .portfolio__list {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  @include mobile {
+    width: 100%;
+  }
   /*другой способ построения сетки*/
   /* margin: -15px; */
 }
 
 .portfolio__item {
+  width: 100%;
   max-width: 450px;
   @include tablet {
     width: calc((100% - 30px) / 2);
