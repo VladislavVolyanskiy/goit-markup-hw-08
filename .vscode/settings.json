@@ -15,5 +15,7 @@
   "liveSassCompile.settings.generateMap": true,
   "liveServer.settings.port": 1235,
   "liveSassCompile.settings.autoprefix": null,
-  "editor.fontSize": 12
+  "editor.fontSize": 14,
+  "prettier.configPath": ".\\prettirrc.json",
+  "prettier.printWidth": 100
 }

@@ -1,30 +1,27 @@
 .logo {
   display: inline-block;
   font-family: $logo-font;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
-  letter-spacing: 0.03em;
+  @include font(24, 28, 700, 0.03);
   color: $accent-color;
-  //Вариант 1: logo__part и модификаторы logo__part--light. На модификаторы только ставим цвет.
+  //logo__part и модификаторы logo__part--light. На модификаторы только ставим цвет.
   //
-  &__part{
+  &__part {
     &--dark {
-      color:black;
-      }
-    &--light {
-      color:white
-      }
+      color: black;
     }
+    &--light {
+      color: white;
+    }
+  }
+  @include desktop {
+    @include font(26, 31, 700, 0.03);
+  }
 }
 
 .header__logo {
   @include desktop {
     margin-right: 93px;
-    }
-  @include tablet {
-    // margin-right: 88px;
-    }
+  }
 }
 
 .footer__logo {

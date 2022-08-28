@@ -1,32 +1,39 @@
 // @mixin font ($fs:14px, $lh:16, $fw, $ls:0.03)
-@mixin font ($fs, $lh, $fw, $ls) {
-    font-size: $fs + px;
-    line-height: $lh / $fs;
-    font-weight: $fw;
-    letter-spacing: $ls + em;
+
+@mixin font($fs, $lh, $fw, $ls) {
+  font-size: $fs + px;
+  line-height: calc($lh / $fs);
+  font-weight: $fw;
+  letter-spacing: $ls + em;
 }
 
 @mixin mobile {
-    @media screen and (min-width: 480px) {
-        @content;
-    }
+  @media screen and (min-width: 480px) {
+    @content;
+  }
 }
 
 @mixin tablet {
-    @media screen and (min-width: 768px) {
-        @content;
-    }
+  @media screen and (min-width: 768px) {
+    @content;
+  }
 }
 
 @mixin desktop {
-    @media screen and (min-width: 1200px) {
-        @content;
-    }
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
 }
 
-// настраиваемій миксин для любой "точки перелома"
+// настраиваемый миксин для любой "точки перелома"
 @mixin media($width) {
-    @media screen and (min-width: $width) {
-        @content;
-    }
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    @content;
+  }
 }

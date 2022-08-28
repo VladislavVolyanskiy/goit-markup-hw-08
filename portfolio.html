@@ -23,11 +23,11 @@
   </head>
   <body>
     <!--------------HEADER---------------->
-    <!-- <header class="header">
-      <div class="container">
-        <nav class="navigation"> -->
+    <header class="header">
+      <div class="header__container container">
+        <nav class="navigation">
           <!-- prettier-ignore -->
-          <!-- <a href="./index.html" class="logo header__logo link">
+          <a href="./index.html" class="logo header__logo link">
             Web<span class="logo__part logo__part--dark">Studio</span>
           </a>
           <ul class="navigation__list list">
@@ -60,8 +60,64 @@
             </a>
           </li>
         </ul>
+        <!-- кнопка открытия моб. меню -->
+        <button type="button" aria-expanded="false" aria-controls="mobile-menu" class="menu-open-btn trans-fill">
+          <svg width="24" height="16">
+            <use href="./images/sprite.svg#hamburger"></use>
+          </svg>
+        </button>
+        <!-- моб. меню ------------------>
+        <div class="mob-menu is-hidden">
+          <div class="mobile-menu" id="mobile-menu">
+            <div class="mob-menu-upper">
+              <button type="button" class="menu-close-btn" menu-close>
+                <svg width="24" height="16">
+                  <use href="./images/sprite.svg#menu-close"></use>
+                </svg>
+              </button>
+              <nav class="mob-menu-nav">
+                <ul class="mob-menu__list list">
+                  <li class="mob-menu__item">
+                    <a href="./index.html" class="mob-menu__link link trans-color">Студия</a>
+                  </li>
+                  <li class="mob-menu__item">
+                    <a href="./portfolio.html" class="mob-menu__link link current">Портфолио</a>
+                  </li>
+                  <li class="mob-menu__item">
+                    <a href="" class="mob-menu__link link trans-color">Контакты</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="mob-menu-lower">
+              <ul class="mob-menu__contacts">
+                <li class="mob-menu__tel">
+                  <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
+                </li>
+                <li class="mob-menu__mail">
+                  <a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a>
+                </li>
+              </ul>
+              <ul class="mob-menu__soc list">
+                <li class="mob-soc__item">
+                  <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link link">Instagram</a>
+                </li>
+                <li class="mob-soc__item">
+                  <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link link">Twitter</a>
+                </li>
+                <li class="mob-soc__item">
+                  <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link link">Facebook</a>
+                </li>
+                <li class="mob-soc__item">
+                  <a href="" target="_blank" rel="noopener noreferrer nofollow" class="mob-soc__link link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- конец меню и моб. кнопок-->
       </div>
-    </header> -->
+    </header>
     <main>
       <!--------------PORTFOLIO---------------->
       <section class="portfolio section">
@@ -86,17 +142,10 @@
             <li class="portfolio__item">
               <a href="" class="portfolio__link link">
                 <div class="portfolio__over-wrap">
-                  <img
-                    src="./images/portfolio01.jpg"
-                    alt="Технокряк"
-                    width="370"
-                    height="294"
-                    class="portfolio__pic"
-                  />
+                  <img src="./images/portfolio01.jpg" alt="Технокряк" width="370" height="294" class="portfolio__pic" />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -116,9 +165,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -138,9 +186,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -160,9 +207,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -182,9 +228,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -204,9 +249,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -226,9 +270,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -248,9 +291,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -270,9 +312,8 @@
                     class="portfolio__pic"
                   />
                   <p class="portfolio__over-text">
-                    Ресурс предлагает комплексные предложения с разным уровнем функционала и
-                    сервисов. Все это позволит посетителю получить исчерпывающие сведения о компании
-                    или частном лице.
+                    Ресурс предлагает комплексные предложения с разным уровнем функционала и сервисов. Все это позволит
+                    посетителю получить исчерпывающие сведения о компании или частном лице.
                   </p>
                 </div>
                 <div class="portfolio__item-text">
@@ -361,5 +402,6 @@
       </form>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

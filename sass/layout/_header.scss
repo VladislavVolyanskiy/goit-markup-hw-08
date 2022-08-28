@@ -3,28 +3,46 @@
   border-bottom: 1px solid #ececec;
   &__container {
     width: 100%;
-    @include desktop {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    }
-    @include tablet {
-    display: flex;
     justify-content: space-between;
-    align-items: center;
-    }
   }
   @include tablet {
-    padding: 21px 0;
+    padding: 20px 0;
   }
   @include desktop {
     padding: 24px 0;
   }
 }
 
+.menu-open-btn {
+  background-color: transparent;
+  border: none;
+  margin-left: auto;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+  @include tablet {
+    display: none;
+  }
+  @include desktop {
+    display: none;
+  }
+  // background-color: $primary-bnd-color;
+  // cursor: pointer;
+  // display: block;
+  // justify-content: center;
+  // align-items: center;
+}
+
 .navigation {
   display: flex;
   align-items: center;
+  gap: 87px;
   &__link {
     font-weight: 500;
     font-size: 14px;
@@ -35,27 +53,7 @@
     &:focus {
       background-color: #ffffff;
       color: $accent-color;
-      }
-  }
-  @include tablet {
-    flex-basis: calc(134px + 294px + 88px); //ширина блоков и расстояние между ними по макету.
-    } 
-}
-
-.nav__btn {
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin-left: auto;
-  justify-content: center;
-  align-items: center;
-  background-color: $primary-bnd-color;
-  border: none;
-  @include tablet {
-    display: none;
-  }
-  @include desktop {
-    display: none;
+    }
   }
 }
 
@@ -67,12 +65,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // margin-right: 84px;
-    }
+  }
   @include desktop {
     display: flex;
     gap: 50px;
-    }
+  }
 }
 
 .header__contacts {
@@ -81,40 +78,34 @@
     display: flex;
     flex-direction: column;
     justify-content: left;
-    row-gap:9px;
-    }
+    row-gap: 10px;
+  }
   @include desktop {
     display: flex;
     flex-direction: row;
-    column-gap:30px;
-    }
+    column-gap: 30px;
+  }
 }
 
 .current {
   color: $accent-color;
   position: relative;
-  &::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 4px;
-    border-radius: 4px;
-    left: 0;
-    background-color: $accent-color;
-    bottom: -32px;
+  @include tablet {
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 4px;
+      border-radius: 4px;
+      left: 0;
+      background-color: $accent-color;
+      bottom: -32.5px;
     }
+  }
 }
 
 .contacts__link--header {
-  height: 14px;
-  font-size: 14px;
-  line-height: 1.14px;
-  font-weight: 500;
-  letter-spacing: 0.02em;
-  @include tablet {
-    @include font (12, 14, 500, 0.02)
-  }
-
+  @include font(12, 14, 500, 0.02);
   /* color: $item-text-color; */
   color: inherit;
   display: flex;
@@ -123,6 +114,12 @@
   &:hover,
   &:focus {
     color: $accent-color;
+  }
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.14;
+    font-weight: 500;
+    letter-spacing: 0.02em;
   }
 }
 

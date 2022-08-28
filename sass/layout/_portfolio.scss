@@ -1,6 +1,9 @@
 .portfolio.section {
 }
 
+.portfolio.container {
+}
+
 .filter {
   display: flex;
   flex-wrap: wrap;
@@ -10,11 +13,11 @@
   @include tablet {
     justify-content: center;
     margin-bottom: 30px;
-    }
+  }
   @include desktop {
     justify-content: center;
     margin-bottom: 50px;
-    }
+  }
 }
 
 .filter__btn {
@@ -44,9 +47,9 @@
   }
 }
 
-
 .portfolio__list {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
   /*другой способ построения сетки*/
@@ -57,15 +60,14 @@
   max-width: 450px;
   @include tablet {
     width: calc((100% - 30px) / 2);
-    }
+  }
   @include desktop {
     width: calc((100% - 60px) / 3);
-    }
+  }
 
   /*другой способ построения сетки*/
   /* width: calc(100% / 3 - 30px);
   margin: 15px; */
-
 }
 
 .portfolio__link {
@@ -77,7 +79,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   &:hover {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
+  }
 }
 
 .portfolio__over-wrap {
@@ -104,7 +106,7 @@
   overflow: auto;
   .portfolio__link:hover & {
     transform: translateY(0);
-    }
+  }
 }
 
 .portfolio__item-text {
@@ -124,7 +126,7 @@
   letter-spacing: 0.06em;
   color: $title-color;
   margin-bottom: 4px;
-  }
+}
 
 .portfolio__type {
   font-size: 16px;
@@ -132,4 +134,4 @@
   letter-spacing: 0.03em;
   /* color: $item-text-color; */
   color: inherit;
-  }
+}

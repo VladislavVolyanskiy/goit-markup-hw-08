@@ -5,7 +5,7 @@
   @include desktop {
     padding-top: 200px;
     padding-bottom: 200px;
-    }
+  }
 }
 
 .hero--bnd {
@@ -16,13 +16,12 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url("../images/hero.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero.jpg");
 }
 
 .hero__title {
   font-family: $common-font;
-  @include font (26, 42, 900, 0.06);
+  @include font(26, 42, 900, 0.06);
   color: #ffffff;
   margin-left: auto;
   margin-right: auto;
@@ -35,12 +34,7 @@
   //   width: 360px
   // }
   @include desktop {
-    @include font (44, 60, 900, 0.06);
-    // lower properties is now work from mixin
-    // font-size: 44px;
-    // font-weight: 900;
-    // line-height: 1.36;
-    // letter-spacing: 0.06em;
+    @include font(44, 60, 900, 0.06);
     max-width: 696px;
-    }
+  }
 }
