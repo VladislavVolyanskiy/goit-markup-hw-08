@@ -163,12 +163,6 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .header__logo {
-    margin-right: 93px;
-  }
-}
-
 .footer__logo {
   margin-bottom: 20px;
 }
@@ -650,7 +644,7 @@ img {
 .navigation {
   display: flex;
   align-items: center;
-  gap: 87px;
+  gap: 93px;
 }
 .navigation__link {
   font-weight: 500;
@@ -875,6 +869,12 @@ img {
   text-transform: uppercase;
   color: #212121;
   margin-bottom: 10px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .advantages__item-title {
+    text-align: start;
+  }
 }
 
 .advantages__text {

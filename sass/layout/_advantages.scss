@@ -4,8 +4,8 @@
   // padding-top: 60px;    //mobile
   // tablet below
   // @media screen and (min-width: 768px) { //tablet
-  // padding-top: 60px; 
-  // padding-bottom: 0px; 
+  // padding-top: 60px;
+  // padding-bottom: 0px;
   // }
   // @media screen and (min-width: 1200px) { //desktop
   // padding-top: 94px;
@@ -23,28 +23,30 @@
 
 .advantages__item {
   width: 100%; //mobile - отзывчивый ниже моб.точки перелома
-  @media screen and (min-width: 768px) { //tablet
+  @media screen and (min-width: 768px) {
+    //tablet
     width: calc((100% - 30px) / 2);
-    }
-  @media screen and (min-width: 1200px) { //tablet
-  width: calc((100% - 90px) / 4);
+  }
+  @media screen and (min-width: 1200px) {
+    //tablet
+    width: calc((100% - 90px) / 4);
   }
   &::before {
-  content: "";
-  display: block;
-  background-color: $secondary-bnd-color;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  width: 100%; //mobile
-  height: 120px;
-  border-radius: 4px;
-  margin-bottom: 30px;
-  // max-width: 100%;
-  // flex-basis: 270px;
-  // width: 270px;  //desktop
+    content: "";
+    display: block;
+    background-color: $secondary-bnd-color;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    width: 100%; //mobile
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    // max-width: 100%;
+    // flex-basis: 270px;
+    // width: 270px;  //desktop
   }
   &:nth-child(1)::before {
-  background-image: url("../images/group1.svg");
+    background-image: url("../images/group1.svg");
   }
   &:nth-child(2)::before {
     background-image: url("../images/group2.svg");
@@ -70,6 +72,10 @@
   text-transform: uppercase;
   color: $title-color;
   margin-bottom: 10px;
+  text-align: center;
+  @include tablet {
+    text-align: start;
+  }
 }
 
 .advantages__text {

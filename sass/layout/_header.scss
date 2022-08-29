@@ -32,6 +32,7 @@
   @include desktop {
     display: none;
   }
+  //работает и без этого
   // background-color: $primary-bnd-color;
   // cursor: pointer;
   // display: block;
@@ -42,7 +43,7 @@
 .navigation {
   display: flex;
   align-items: center;
-  gap: 87px;
+  gap: 93px;
   &__link {
     font-weight: 500;
     font-size: 14px;
