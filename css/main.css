@@ -258,6 +258,7 @@ img {
 
 .backdrop {
   position: fixed;
+  overflow-y: auto;
   /* position: absolute; */
   top: 0;
   left: 0;
