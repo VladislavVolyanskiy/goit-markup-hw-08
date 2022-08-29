@@ -3,7 +3,7 @@
   padding: 60px 0;
 }
 
-.footer__container { 
+.footer__container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,10 +13,10 @@
   //column-gap: 165px;
   //}
   @include desktop {
-    justify-content:left;
+    justify-content: left;
     gap: 0;
     align-items: baseline;
-    }
+  }
 }
 
 .address-wrap {
@@ -61,18 +61,15 @@
   display: block;
   width: 206px;
   @include desktop {
-  margin-left: 70px;
+    margin-left: 70px;
   }
 }
 
-
-  // .address-wrap, .footer__socials {
-  // @include tablet {
-  //   flex-basis: 50%;
-  //   }
-  // }
-
-
+// .address-wrap, .footer__socials {
+// @include tablet {
+//   flex-basis: 50%;
+//   }
+// }
 
 .socials__title,
 .signup__title {
@@ -83,10 +80,11 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   margin-bottom: 20px;
-  &--light {color: #ffffff;
+  &--light {
+    color: #ffffff;
   }
   @include desktop {
-  text-align: left;
+    text-align: left;
   }
 }
 
@@ -110,8 +108,8 @@
   @include desktop {
     justify-content: left;
     margin-left: 93px;
-    }
   }
+}
 
 .signup__wrap {
   display: flex;
@@ -121,11 +119,12 @@
   @include desktop {
     gap: 12px;
     flex-wrap: nowrap;
-    }
+  }
 }
 
 .signup__input {
   width: 100%;
+
   color: rgba(255, 255, 255, 0.6);
   background-color: inherit;
   outline: transparent;
@@ -136,13 +135,16 @@
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   &::placeholder {
     color: rgba(255, 255, 255, 0.6);
-    }
+  }
   &:focus {
     border-color: $accent-color;
-    }
-    @include desktop {
-      width: 358px;
-    }
+  }
+  @include mobile {
+    width: 450px;
+  }
+  @include desktop {
+    width: 358px;
+  }
 }
 
 .signup__icon {
