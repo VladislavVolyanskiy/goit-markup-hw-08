@@ -717,6 +717,7 @@ img {
 .contacts__flattener {
   display: flex;
   align-items: center;
+  height: 14px;
 }
 
 .contacts__tel-text {
