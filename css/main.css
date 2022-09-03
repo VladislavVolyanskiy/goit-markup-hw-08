@@ -260,6 +260,7 @@ img {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  overflow-y: auto;
 }
 
 .modal {
@@ -713,6 +714,20 @@ img {
   }
 }
 
+.contacts__flattener {
+  display: flex;
+  align-items: center;
+}
+
+.contacts__tel-text {
+  padding-top: 2px;
+}
+@media screen and (min-width: 1200px) {
+  .contacts__tel-text {
+    padding-top: 0px;
+  }
+}
+
 .contacts__link--header {
   font-size: 12px;
   line-height: 1.1666666667;
@@ -739,6 +754,30 @@ img {
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .contacts__icon-mail {
+    width: 14px;
+    height: 10px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon-mail {
+    width: 16px;
+    height: 12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contacts__icon-tel {
+    width: 10px;
+    height: 14px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .contacts__icon-tel {
+    width: 10px;
+    height: 16px;
+  }
 }
 
 .hero.section {

@@ -105,6 +105,20 @@
   }
 }
 
+//это не выравнивает текст ссылки внутри элемента
+.contacts__flattener {
+  display: flex;
+  align-items: center;
+}
+
+//this crutch does
+.contacts__tel-text {
+  padding-top: 2px;
+  @include desktop {
+    padding-top: 0px;
+  }
+}
+
 .contacts__link--header {
   @include font(12, 14, 500, 0.02);
   /* color: $item-text-color; */
@@ -127,4 +141,24 @@
 .contacts__icon {
   fill: currentColor;
   margin-right: 10px;
+  &-mail {
+    @include tablet {
+      width: 14px;
+      height: 10px;
+    }
+    @include desktop {
+      width: 16px;
+      height: 12px;
+    }
+  }
+  &-tel {
+    @include tablet {
+      width: 10px;
+      height: 14px;
+    }
+    @include desktop {
+      width: 10px;
+      height: 16px;
+    }
+  }
 }
